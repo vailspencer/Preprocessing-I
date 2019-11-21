@@ -26,15 +26,17 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer,header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+section {
+	text-decoration: none !important;
 }
+
 blockquote, q {
 	quotes: none;
 }
@@ -57,3 +59,111 @@ html, body {
     height: 100%;
 }
 
+
+
+.whole-body {
+display: flex;
+flex-direction: column;
+}
+
+.navigation {
+	float: right;
+	text-decoration:none !important;
+	margin-bottom:100px;
+	width:100%;
+	display:flex;
+	align-content: space-between;
+	
+	
+	.anchor-style {
+		display:flex;
+		flex-direction: row;
+		text-decoration: none !important;
+		color: black;
+		justify-content: space-between;
+		padding-left: 30px;
+		padding-right: 30px;
+	}	
+
+	&:hover {
+		text-decoration: none;
+		color: green;
+	}
+}
+
+.top-section {
+	display: flex;
+	background-color: #e9ecef;
+	flex-direction: column;
+	align-content: center;
+	margin-left: 40px;
+	margin-bottom: 50px;
+
+	.top-image {
+		width:30%;
+	}
+	
+	.my-name {
+		font-size: 50px;
+		justify-content: center;
+
+	}
+
+	.click {
+		background-color: #808080;
+		font-size:16px ;
+		width: 250px;
+		border: 2px solid black;
+		text-align: center;
+		padding: 8px 32px;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		text-decoration: none !important;
+	}
+}
+
+.middle-section {
+	display:flex;
+	flex-direction: row;
+	margin-right: 40px; 
+	margin-left: 40px;
+	justify-content: space-evenly;
+
+	.custom {
+		font-size: 30px;
+	}
+	
+	.left-section {
+		display:flex;
+		flex-direction:column;
+		margin-right: 40px;
+		margin-bottom: 35px;
+	}
+	
+	
+	}
+
+.the-bottom {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 40px;
+	margin-left: 40px;
+
+	.table-one {
+		display:flex;
+		border: 2px solid black;
+		}
+}
+
+.custom-two {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+.the-other-bottom {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 40px;
+	margin-left: 40px;
+}

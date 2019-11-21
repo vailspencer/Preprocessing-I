@@ -1,1 +1,223 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+section {
+  text-decoration: none !important;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.whole-body {
+  display: flex;
+  flex-direction: column;
+}
+.navigation {
+  float: right;
+  text-decoration: none !important;
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+}
+.navigation .anchor-style {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none !important;
+  color: black;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.navigation:hover {
+  text-decoration: none;
+  color: green;
+}
+.top-section {
+  display: flex;
+  background-color: #e9ecef;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 40px;
+  margin-bottom: 50px;
+}
+.top-section .top-image {
+  width: 30%;
+}
+.top-section .my-name {
+  font-size: 50px;
+  justify-content: center;
+}
+.top-section .click {
+  background-color: #808080;
+  font-size: 16px ;
+  width: 250px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 8px 32px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-decoration: none !important;
+}
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+  margin-left: 40px;
+  justify-content: space-evenly;
+}
+.middle-section .custom {
+  font-size: 30px;
+}
+.middle-section .left-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  margin-bottom: 35px;
+}
+.the-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+.the-bottom .table-one {
+  display: flex;
+  border: 2px solid black;
+}
+.custom-two {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.the-other-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
