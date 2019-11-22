@@ -125,6 +125,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* Google Font */
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -133,19 +134,29 @@ html,
 body {
   height: 100%;
 }
+/* Variables */
+/* Mixins */
+/* CSS */
 .whole-body {
   display: flex;
   flex-direction: column;
+  background-color: #338EF7;
 }
-.navigation {
+@media (max-width: 500px) {
+  .whole-body {
+    background-color: #051e42;
+    font-family: 'Odibee Sans', cursive;
+  }
+}
+.whole-body .navigation {
   float: right;
   text-decoration: none !important;
-  margin-bottom: 100px;
-  width: 100%;
+  margin-bottom: 50px;
+  width: 95%;
   display: flex;
   align-content: space-between;
 }
-.navigation .anchor-style {
+.whole-body .navigation .anchor-style {
   display: flex;
   flex-direction: row;
   text-decoration: none !important;
@@ -153,27 +164,53 @@ body {
   justify-content: space-between;
   padding-left: 30px;
   padding-right: 30px;
+  border: 3px solid black;
+  width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 10px;
+  margin-right: 10px;
 }
-.navigation:hover {
+@media (max-width: 500px) {
+  .whole-body .navigation .anchor-style {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.whole-body .navigation:hover {
   text-decoration: none;
   color: green;
 }
-.top-section {
+.whole-body .top-section {
   display: flex;
-  background-color: #e9ecef;
+  background-color: #DD0000;
   flex-direction: column;
   align-content: center;
+  justify-content: space-around;
   margin-left: 40px;
   margin-bottom: 50px;
+  margin-right: 50px;
+  width: 90%;
 }
-.top-section .top-image {
+@media (max-width: 500px) {
+  .whole-body .top-section {
+    background-color: #1b163f;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+.whole-body .top-section .top-image {
   width: 30%;
 }
-.top-section .my-name {
+.whole-body .top-section .my-name {
   font-size: 50px;
   justify-content: center;
 }
-.top-section .click {
+@media (max-width: 500px) {
+  .whole-body .top-section .my-name {
+    font-size: 20px;
+  }
+}
+.whole-body .top-section .click {
   background-color: #808080;
   font-size: 16px ;
   width: 250px;
@@ -183,41 +220,69 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-decoration: none !important;
 }
-.middle-section {
+.whole-body .middle-section {
   display: flex;
   flex-direction: row;
   margin-right: 40px;
   margin-left: 40px;
   justify-content: space-evenly;
+  border: 3px solid black;
 }
-.middle-section .custom {
+@media (max-width: 500px) {
+  .whole-body .middle-section {
+    background-color: #9f5cdb;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+.whole-body .middle-section .custom {
   font-size: 30px;
 }
-.middle-section .left-section {
+.whole-body .middle-section .left-section {
   display: flex;
   flex-direction: column;
   margin-right: 40px;
   margin-bottom: 35px;
-}
-.the-bottom {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 40px;
   margin-left: 40px;
 }
-.the-bottom .table-one {
+.whole-body .the-bottom {
   display: flex;
-  border: 2px solid black;
+  flex-direction: column;
+  margin-right: 40px;
+  margin-bottom: 35px;
+  margin-left: 40px;
+  border: 3px solid black;
+  background-color: #7DF9FF;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  padding-left: 40px;
 }
-.custom-two {
+.whole-body .the-bottom .custom {
   font-size: 30px;
-  margin-bottom: 15px;
+  margin-top: 10px;
 }
-.the-other-bottom {
+.whole-body .the-other-bottom {
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-bottom: 40px;
   margin-left: 40px;
+  margin-right: 40px;
+  border: 3px solid black;
+  background-color: #FD3A57;
+  align-content: center;
+  padding-right: 40px;
+  width: 95%;
+}
+@media (max-width: 500px) {
+  .whole-body .the-other-bottom {
+    color: black;
+  }
+}
+.whole-body .the-other-bottom .custom-two {
+  font-size: 30px;
+  margin-left: 30px;
+  color: white;
+  padding-top: 20px;
+}
+.whole-body .the-other-bottom .contact-box {
+  padding-left: 30px;
+  padding-bottom: 30px;
 }
