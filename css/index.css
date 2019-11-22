@@ -1,1 +1,288 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+section {
+  text-decoration: none !important;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Google Font */
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* Variables */
+/* Mixins */
+/* CSS */
+.whole-body {
+  display: flex;
+  flex-direction: column;
+  background-color: #338EF7;
+}
+@media (max-width: 500px) {
+  .whole-body {
+    background-color: #051e42;
+    font-family: 'Odibee Sans', cursive;
+  }
+}
+.whole-body .navigation {
+  float: right;
+  text-decoration: none !important;
+  margin-bottom: 50px;
+  width: 95%;
+  display: flex;
+  align-content: space-between;
+}
+.whole-body .navigation .anchor-style {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none !important;
+  color: black;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 3px solid black;
+  width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 10px;
+  margin-right: 10px;
+}
+@media (max-width: 500px) {
+  .whole-body .navigation .anchor-style {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.whole-body .navigation:hover {
+  text-decoration: none;
+  color: green;
+}
+.whole-body .top-section {
+  display: flex;
+  background-color: #DD0000;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  margin-left: 40px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  width: 90%;
+}
+@media (max-width: 500px) {
+  .whole-body .top-section {
+    background-color: #1b163f;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+.whole-body .top-section .top-image {
+  width: 30%;
+}
+.whole-body .top-section .my-name {
+  font-size: 50px;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .whole-body .top-section .my-name {
+    font-size: 20px;
+  }
+}
+.whole-body .top-section .click {
+  background-color: #808080;
+  font-size: 16px ;
+  width: 250px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 8px 32px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-decoration: none !important;
+}
+.whole-body .middle-section {
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+  margin-left: 40px;
+  justify-content: space-evenly;
+  border: 3px solid black;
+}
+@media (max-width: 500px) {
+  .whole-body .middle-section {
+    background-color: #9f5cdb;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+.whole-body .middle-section .custom {
+  font-size: 30px;
+}
+.whole-body .middle-section .left-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  margin-bottom: 35px;
+  margin-left: 40px;
+}
+.whole-body .the-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  margin-bottom: 35px;
+  margin-left: 40px;
+  border: 3px solid black;
+  background-color: #7DF9FF;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  padding-left: 40px;
+}
+.whole-body .the-bottom .custom {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.whole-body .the-other-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 3px solid black;
+  background-color: #FD3A57;
+  align-content: center;
+  padding-right: 40px;
+  width: 95%;
+}
+@media (max-width: 500px) {
+  .whole-body .the-other-bottom {
+    color: black;
+  }
+}
+.whole-body .the-other-bottom .custom-two {
+  font-size: 30px;
+  margin-left: 30px;
+  color: white;
+  padding-top: 20px;
+}
+.whole-body .the-other-bottom .contact-box {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}

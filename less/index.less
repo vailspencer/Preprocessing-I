@@ -26,15 +26,17 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer,header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+section {
+	text-decoration: none !important;
 }
+
 blockquote, q {
 	quotes: none;
 }
@@ -48,6 +50,8 @@ table {
 	border-spacing: 0;
 }
 
+/* Google Font */
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -57,3 +61,185 @@ html, body {
     height: 100%;
 }
 
+/* Variables */
+@boxbackgroundcolor: #7DF9FF;
+@anotherbackgroundcolor: #FD3A57;
+@goodfonts: "Goudy Bookletter 1911", sans-serif;
+@mobilebackground: #051e42;
+
+
+/* Mixins */
+.round-borders() {
+	border: 3px solid black;
+	width: 100%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.my-mixin() {
+	color: white;
+	padding-top:20px;
+}
+
+/* CSS */
+.whole-body {
+	display: flex;
+	flex-direction: column;
+	background-color: #338EF7;
+
+
+	@media (max-width: 500px) {
+		background-color: @mobilebackground;
+		font-family: 'Odibee Sans', cursive;
+	}
+
+.navigation {
+	float: right;
+	text-decoration:none !important;
+	margin-bottom:50px;
+	width:95%;
+	display:flex;
+	align-content: space-between;
+	
+	.anchor-style {
+		display:flex;
+		flex-direction: row;
+		text-decoration: none !important;
+		color: black;
+		justify-content: space-between;
+		padding-left: 30px;
+		padding-right: 30px;	
+		.round-borders();
+
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+		}
+		}
+		
+	&:hover {
+		text-decoration: none;
+		color: green;
+	}
+}
+
+.top-section {
+	display: flex;
+	background-color: #DD0000;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-around;
+	margin-left: 40px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+	width:90%;
+ 
+	@media (max-width: 500px) {
+		background-color: #1b163f;
+		color: white;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	
+
+	.top-image {
+		width:30%;
+
+	}
+	
+	.my-name {
+		font-size: 50px;
+		justify-content: center;
+
+		@media (max-width: 500px) {
+			font-size: 20px;
+		}
+
+	}
+
+	.click {
+		background-color: #808080;
+		font-size:16px ;
+		width: 250px;
+		border: 2px solid black;
+		text-align: center;
+		padding: 8px 32px;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		text-decoration: none !important;
+	}
+}
+
+.middle-section {
+	display:flex;
+	flex-direction: row;
+	margin-right: 40px; 
+	margin-left: 40px;
+	justify-content: space-evenly;
+	border: 3px solid black;
+
+	@media (max-width: 500px) {
+		background-color: #9f5cdb;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+
+	.custom {
+		font-size: 30px;
+	}
+	
+	.left-section {
+		display:flex;
+		flex-direction:column;
+		margin-right: 40px;
+		margin-bottom: 35px;
+		margin-left: 40px;
+	}
+	
+
+	}
+
+.the-bottom {
+	display:flex;
+	flex-direction:column;
+	margin-right: 40px;
+	margin-bottom: 35px;
+	margin-left: 40px;
+	border: 3px solid black;
+	background-color: @boxbackgroundcolor;
+	font-family: @goodfonts;
+	padding-left: 40px;
+
+	.custom {
+		font-size: 30px;
+		margin-top: 10px;
+	}
+}
+
+.the-other-bottom {
+	display:flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+	margin-left: 40px;
+	margin-right:40px;
+	border: 3px solid black;
+	background-color: @anotherbackgroundcolor;
+	align-content: center;
+	padding-right: 40px;
+	width: 95%;
+
+	@media (max-width:500px) {
+		color:black;
+	}
+	
+
+	.custom-two {
+		font-size: 30px;
+		margin-left: 30px;
+		.my-mixin;
+	}
+
+	.contact-box {
+	padding-left: 30px;
+	padding-bottom: 30px;
+	}
+	}
+}
